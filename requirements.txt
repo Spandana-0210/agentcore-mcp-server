@@ -1,0 +1,7 @@
+fastmcp
+boto3
+botocore
+tenacity 
+ijson 
+pandas
+python-dotenv
