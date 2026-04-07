@@ -3,7 +3,7 @@ name: Deploy to AgentCore
 on:
   push:
     branches:
-      - main
+      - master
  
 permissions:
   id-token: write   # REQUIRED for OIDC
