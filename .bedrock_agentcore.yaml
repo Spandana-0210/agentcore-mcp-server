@@ -11,12 +11,12 @@ agents:
     container_runtime: none
     source_path: C:\Users\mispandana\agentcore-mcp-server
     aws:
-      execution_role: null
-      execution_role_auto_create: true
+      execution_role: arn:aws:iam::212499160857:role/AmazonBedrockAgentCoreSDKRuntime-us-east-1-ccfe52f430
+      execution_role_auto_create: false
       account: '212499160857'
       region: us-east-1
-      ecr_repository: null
-      ecr_auto_create: true
+      ecr_repository: 212499160857.dkr.ecr.us-east-1.amazonaws.com/bedrock-agentcore-mcp_server_spa
+      ecr_auto_create: false
       s3_path: null
       s3_auto_create: false
       network_configuration:
@@ -30,20 +30,20 @@ agents:
         idle_runtime_session_timeout: null
         max_lifetime: null
     bedrock_agentcore:
-      agent_id: null
-      agent_arn: null
+      agent_id: mcp_server_spa-QHy4zABRHR
+      agent_arn: arn:aws:bedrock-agentcore:us-east-1:212499160857:runtime/mcp_server_spa-QHy4zABRHR
       agent_session_id: null
     codebuild:
-      project_name: null
-      execution_role: null
-      source_bucket: null
+      project_name: bedrock-agentcore-mcp_server_spa-builder
+      execution_role: arn:aws:iam::212499160857:role/AmazonBedrockAgentCoreSDKCodeBuild-us-east-1-ccfe52f430
+      source_bucket: bedrock-agentcore-codebuild-sources-212499160857-us-east-1
     memory:
       mode: STM_AND_LTM
-      memory_id: null
-      memory_arn: null
-      memory_name: mcp_server_spa_memory
+      memory_id: mcp_server_spa_mem-nqK7kKFseE
+      memory_arn: arn:aws:bedrock-agentcore:us-east-1:212499160857:memory/mcp_server_spa_mem-nqK7kKFseE
+      memory_name: mcp_server_spa_mem
       event_expiry_days: 30
-      first_invoke_memory_check_done: false
+      first_invoke_memory_check_done: true
       was_created_by_toolkit: false
     identity:
       credential_providers: []
